@@ -1,0 +1,62 @@
+:root {
+    --bg-deep: #0f172a;
+    --bg-darker: #020617;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-hover: rgba(255, 255, 255, 0.08);
+    --good: #22c55e;
+    --satisfactory: #84cc16;
+    --moderate: #eab308;
+    --poor: #f97316;
+    --very-poor: #ef4444;
+    --severe: #7f1d1d;
+}
+
+/* Custom styles for Streamlit components to match the premium theme */
+.stApp {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(24px);
+    border-radius: 28px;
+    padding: 1.8rem;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid currentColor;
+}
+
+h3 {
+    font-size: 0.9rem !important;
+    color: var(--accent) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 1.5rem !important;
+    font-weight: 800 !important;
+}

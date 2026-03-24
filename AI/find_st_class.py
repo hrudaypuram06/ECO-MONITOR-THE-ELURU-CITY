@@ -1,0 +1,14 @@
+import os
+import streamlit
+st_path = os.path.dirname(streamlit.__file__)
+print(f"Finding 'ScriptRunContext' in: {st_path}")
+for root, dirs, files in os.walk(st_path):
+    for file in files:
+        if file.endswith(".py"):
+            path = os.path.join(root, file)
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    if "ScriptRunContext" in f.read():
+                        rel = os.path.relpath(path, st_path)
+                        print(f"Found in: streamlit.{rel.replace(os.sep, '.')[:-3]}")
+            except: pass
